@@ -432,20 +432,112 @@ const OCCUPATION_TEMPLATE = {
 // 装备模板
 const EQUIPMENT_TEMPLATE = {
     name: "",
-    type: "", // 装备类型
     quality: "", // 装备质量
 };
+
+const EQUIPMENT_NAME = [
+    "铜",
+    "铁",
+    "银",
+    "金",
+    "秘银",
+    "轻型",
+    "兽",
+    "重型",
+    "中型",
+    "丝绸",
+    "粗",
+];
+const EQUIPMENT_QUALITY = ["白", "蓝", "黄", "橙", "红", "紫"];
+const EQUIPMENT_TYPE = [
+    "盾",
+    "铠甲",
+    "皮手套",
+    "皮护手",
+    "头盔",
+    "皮帽",
+    "部帽",
+    "手甲",
+    "匕首",
+];
 // 记忆模板
 const MEMORY_TEMPLATE = {
     name: "", // 记忆名称
     quality: "", // 记忆质量
     cost: "", // 费用
+    occupation: "", // 职业
 };
 // 附魔模板
 const ENCHANT_TEMPLATE = {
     name: "", // 附魔名称
     quality: "", // 附魔质量
 };
+const ENCHANT = [
+    {
+        name: "通用附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "盾牌附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "武器附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "戒指附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "耳环附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "项链附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "护手附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "手套附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "头部附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "肩部附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "裤子附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "腰带附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "鞋子附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "披风附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "防具附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+    {
+        name: "饰品附魔", // 附魔名称
+        quality: "白", // 附魔质量
+    },
+];
 // 核心模板
 const CORE_TEMPLATE = {
     name: "", // 核心名称
@@ -463,7 +555,74 @@ const DUNGEONS = [
         name: "1", // 副本名
         "+1": {
             equipment: [], //装备
-            memory: [], //记忆
+            memory: [
+                {
+                    name: "力体智5", // 记忆名称
+                    quality: "红", // 记忆质量
+                    cost: "5", // 费用
+                    occupation: "气功", // 职业
+                },
+                {
+                    name: "力体4", // 记忆名称
+                    quality: "橙", // 记忆质量
+                    cost: "4", // 费用
+                    occupation: "野蛮", // 职业
+                },
+                {
+                    name: "命中4", // 记忆名称
+                    quality: "蓝", // 记忆质量
+                    cost: "4", // 费用
+                    occupation: "猎鹰", // 职业
+                },
+                {
+                    name: "连技3", // 记忆名称
+                    quality: "蓝", // 记忆质量
+                    cost: "3", // 费用
+                    occupation: "斗士", // 职业
+                },
+                {
+                    name: "防御2", // 记忆名称
+                    quality: "白", // 记忆质量
+                    cost: "2", // 费用
+                    occupation: "守卫", // 职业
+                },
+                {
+                    name: "全属1", // 记忆名称
+                    quality: "白", // 记忆质量
+                    cost: "1", // 费用
+                    occupation: "龙目", // 职业
+                },
+                {
+                    name: "魔力5", // 记忆名称
+                    quality: "黄", // 记忆质量
+                    cost: "5", // 费用
+                    occupation: "时导", // 职业
+                },
+                {
+                    name: "大力4", // 记忆名称
+                    quality: "黄", // 记忆质量
+                    cost: "4", // 费用
+                    occupation: "骑士", // 职业
+                },
+                {
+                    name: "敏体3", // 记忆名称
+                    quality: "黄", // 记忆质量
+                    cost: "3", // 费用
+                    occupation: "敏骑", // 职业
+                },
+                {
+                    name: "全属2", // 记忆名称
+                    quality: "蓝", // 记忆质量
+                    cost: "2", // 费用
+                    occupation: "全能", // 职业
+                },
+                {
+                    name: "弱点伤害1", // 记忆名称
+                    quality: "白", // 记忆质量
+                    cost: "1", // 费用
+                    occupation: "全能", // 职业
+                },
+            ], //记忆
             enchant: [], //附魔
             core: [], //核心
             unique: [], //独特
